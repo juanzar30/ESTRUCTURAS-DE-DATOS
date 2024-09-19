@@ -1,0 +1,48 @@
+#3.5 Variables globales
+"""
+Crea una variable fuera de una función y úsala dentro de la función
+"""
+x = "feliz"
+
+def myfunc():
+  print("andres esta " + x)
+
+myfunc()
+
+"""
+Crea una variable dentro de una función, con el mismo nombre que la variable global
+"""
+x = "feliz"
+
+def myfunc():
+  x = "alegre"
+  print("juan esta " + x)
+
+myfunc()
+
+print("juan esta " + x)
+
+"""
+Si utiliza la global palabra clave, la variable pertenece al ámbito global:
+"""
+def myfunc():
+  global x
+  x = "alegre"
+
+myfunc()
+
+print("pablo esta " + x)
+
+"""
+Para cambiar el valor de una variable global dentro de
+una función, haga referencia a la variable utilizando la global palabra clave:
+"""
+x = "feliz"
+
+def myfunc():
+  global x
+  x = "alegre"
+
+myfunc()
+
+print("zarate esta " + x)
